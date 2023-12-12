@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.hero-section{
+min-height: 100dvh;
+background: url('../public/hero-bg.jpg') center no-repeat ;
+background-size: cover;
+
+}
+
+.layer{
+    background-color: rgba(51, 51, 51, .3) ;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
