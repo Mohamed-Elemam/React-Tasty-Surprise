@@ -4,7 +4,7 @@
 
 .hero-section{
 min-height: 100dvh;
-background: url('../public/hero-bg.jpg') center no-repeat ;
+background: url('../public/home-background.webp') center no-repeat ;
 background-size: cover;
 
 }

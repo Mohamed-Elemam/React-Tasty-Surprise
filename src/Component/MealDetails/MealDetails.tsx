@@ -13,7 +13,7 @@ const MealDetails = () => {
   };
   const [apiData, setApiData] = useState([]);
   const [apiError, setApiError] = useState<unknown>();
-  const [dishData, setDishData] = useState<ApiData>([]);
+  const [dishData, setDishData] = useState<ApiData>();
   const [randomMeal, setRandomMeal] = useState<ApiData>();
   const [loading, setLoading] = useState<boolean>(false);
 
@@ -100,42 +100,44 @@ const MealDetails = () => {
           </button>
         )}
       </div>
-      <p className="text-warning">{apiError}</p>
+      {/* <p className="text-warning">{apiError?}</p> */}
       {dishData?.strMeal}
-      <div className="col-md-4">
-        <div className=" rounded-4">
-          <div className=" meal-card">
-            <img
-              src={randomMeal.strMealThumb}
-              className="w-75 my-3 rounded-2"
-            />
+   <div className="col-md-4">
+<div className=" rounded-4">
+  <div className=" meal-card">
+    <img
+      src={dishData?.strMealThumb}
+      className="w-75 my-3 rounded-2"
+    />
 
-            <h1> {randomMeal.strMeal} </h1>
-          </div>
-        </div>
-      </div>
-      <div className="col-md-8">
-        <h2>Instructions</h2>
-        <p> {dishData.strInstructions}</p>
-        <div>
-          <span className="h2">Area :</span>
-          <span className="h4"> {dishData.strArea}</span>
-        </div>
-        <div>
-          <span className="h2">Category :</span>
-          <span className="h4"> {dishData.strCategory}</span>
-        </div>
-        <h2>Recipes :</h2>
+    <h1> {dishData?.strMeal} </h1>
+  </div>
+</div>
+</div>
+<div className="col-md-8">
+<h2>Instructions</h2>
+<p> {dishData?.strInstructions}</p>
+<div>
+  <span className="h2">Area :</span>
+  <span className="h4"> {dishData?.strArea}</span>
+</div>
+<div>
+  <span className="h2">Category :</span>
+  <span className="h4"> {dishData?.strCategory}</span>
+</div>
+<h2>Recipes :</h2>
 
-        <a href={dishData.strSource} className="btn btn-success me-3">
-          Source
-        </a>
-        <a href={dishData.strYoutube} className="btn btn-danger me-3">
-          Youtube
-        </a>
-      </div>
+<a href={dishData?.strSource} className="btn btn-success me-3">
+  Source
+</a>
+<a href={dishData?.strYoutube} className="btn btn-danger me-3">
+  Youtube
+</a>
+</div> 
     </>
   );
 };
 
 export default MealDetails;
+
+
