@@ -2,19 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
-.hero-section{
-min-height: 100dvh;
-background: url('../public/home-background.webp') center no-repeat ;
-background-size: cover;
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.layer{
-    background-color: rgba(51, 51, 51, .3) ;
-    height: 100dvh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 16px;
+html {
+  scroll-behavior: smooth;
+}
+
+.hero-section {
+  min-height: 100dvh;
+  background: url("../public/home-background.webp") center no-repeat;
+  background-size: cover;
+}
+
+.layer {
+  background-color: rgba(0, 0, 0, 0.8);
+  min-height: 120dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 36px;
+}
+.generate-section {
+  min-height: 120dvh;
+  background: url("../public/generate-section-background.webp") no-repeat;
 }
