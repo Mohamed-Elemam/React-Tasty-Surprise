@@ -4,9 +4,9 @@
 const Footer = () => {
   return (
     <>
-      <footer className="F footer-center p-4 bg-base-300 text-base-content">
+      <footer className=" footer-center p-3 font-semibold bg-warning text-base-content">
         <aside>
-          <p>Copyright © 2023 - All right reserved by ACME Industries Ltd</p>
+          <p>Copyright © 2023 - All right reserved </p>
         </aside>
       </footer>
     </>
