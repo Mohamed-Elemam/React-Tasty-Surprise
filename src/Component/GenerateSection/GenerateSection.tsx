@@ -26,7 +26,7 @@ const GenerateSection = () => {
       );
       setKitchenMeals(data?.meals);
     } catch (error: unknown) {
-        console.log( 'getKitchenMeals': error)
+        console.log( 'getKitchenMeals:' error)
       setApiError(
         "There was a problem fetching the meal data. Please try again later."
       );
@@ -42,7 +42,7 @@ const GenerateSection = () => {
       );
       setMealData(data?.meals);
     } catch (error: unknown) {
-        console.log( 'getDish': error)
+        console.log( 'getDish:' error)
       setApiError(
         "There was a problem fetching the meal data. Please try again later."
       );
