@@ -39,7 +39,7 @@ const GenerateSection = () => {
       const { data } = await axios.get(
         import.meta.env.VITE_API_LINK_GET_MEAL_DETAILS + mealStr
       );
-      setMealData(data?.meals[0]);
+      setMealData(data?.meals?.at(0));
     } catch (error: unknown) {
       setApiError(
         "There was a problem fetching the meal data. Please try again later."
