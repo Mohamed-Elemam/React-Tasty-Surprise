@@ -2,7 +2,7 @@ const HeroSection = () => {
   return (
     <>
       <div className="hero-section text-white">
-        <div className="layer">
+        <div className="hero-layer">
           <h1 className="text-5xl font-bold capitalize">tasty surprise</h1>
           <p className="text-2xl font-semibold w-[75%] text-center">
             Welcome to Tasty Surprise, your go-to source for discovering
