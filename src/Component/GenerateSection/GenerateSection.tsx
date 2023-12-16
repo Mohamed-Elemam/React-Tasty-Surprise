@@ -84,7 +84,7 @@ const GenerateSection = () => {
               ))}
             </select>
             {apiError && (
-              <p className="text-error-content text-center">{apiError}</p>
+              <p className="text-2xl text-red-500 font-semibold  text-center">{apiError}</p>
             )}
             {loading ? (
               <button className="btn btn-warning">
