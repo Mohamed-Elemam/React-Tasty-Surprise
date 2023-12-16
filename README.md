@@ -14,7 +14,6 @@ Tasty Surprise is a React application that allows users to discover delicious re
 - TypeScript
 - Vite
 - Axios
-- React Query
 - Tailwind CSS
 - Daisy ui
 - PostCSS
