@@ -22,7 +22,7 @@ const GenerateSection = () => {
     try {
       setLoading(true);
       const { data } = await axios.get(
-        import.meta.env.VITE_API_LINK_GET_COUNTRY_MEALS + kitchenStr
+        import.meta.env.VITE_API_LINK_GET_COUNTRY_MEALS+kitchenStr
       );
       setKitchenMeals(data.meals);
     } catch (error: unknown) {
@@ -37,7 +37,7 @@ const GenerateSection = () => {
     try {
       setLoading(true);
       const { data } = await axios.get(
-        import.meta.env.VITE_API_LINK_GET_MEAL_DETAILS + mealStr
+        import.meta.env.VITE_API_LINK_GET_MEAL_DETAILS+mealStr
       );
       setMealData(data.meals[0]);
     } catch (error: unknown) {
@@ -64,7 +64,7 @@ const GenerateSection = () => {
   return (
     <>
       <section id="section2" className="generate-section">
-        <div className="layer">
+        <div className="generate-layer">
           <div className="flex flex-col gap-5 justify-center items-center text-center container py-5">
             <h3 className="my-3 text-white text-4xl font-semibold">
               Start discovering delicious recipes
@@ -76,7 +76,7 @@ const GenerateSection = () => {
               className="select select-warning w-full max-w-xs"
               onChange={(e) => getKitchenMeals(e.target.value)}
             >
-              <option selected>Egyptian</option>
+              <option selected value="Egyptian" >Egyptian</option>
               {kitchens.map((kitchen, index) => (
                 <option key={index} value={kitchen}>
                   {kitchen}
