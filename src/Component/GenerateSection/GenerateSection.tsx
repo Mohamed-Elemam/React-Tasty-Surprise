@@ -26,7 +26,7 @@ const GenerateSection = () => {
       );
       setKitchenMeals(data?.meals);
     } catch (error: unknown) {
-        console.log( 'getKitchenMeals:' error)
+        console.log( error)
       setApiError(
         "There was a problem fetching the meal data. Please try again later."
       );
@@ -42,7 +42,7 @@ const GenerateSection = () => {
       );
       setMealData(data?.meals);
     } catch (error: unknown) {
-        console.log( 'getDish:' error)
+        console.log( error)
       setApiError(
         "There was a problem fetching the meal data. Please try again later."
       );
@@ -53,6 +53,8 @@ const GenerateSection = () => {
 
   useEffect(() => {
     getKitchenMeals("Egyptian");
+    console.log(import.meta.env.VITE_API_LINK_GET_COUNTRY_MEALS)
+    console.log(import.meta.env.VITE_API_LINK_GET_MEAL_DETAILS)
   }, []);
 
   function getRandomMeal() {
