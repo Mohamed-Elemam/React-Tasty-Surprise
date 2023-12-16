@@ -1,27 +1,27 @@
-# React + TypeScript + Vite
+# Tasty Surprise
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Tasty Surprise is a React application that allows users to discover delicious recipes from various cuisines. The application is built with TypeScript and uses Vite as the build tool.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Discover recipes from various cuisines
+- View detailed information about each recipe, including ingredients and measurements
+- Fetches real-time data from an external API
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- React
+- TypeScript
+- Vite
+- Axios
+- React Query
+- Tailwind CSS
+- Daisy ui
+- PostCSS
 
-- Configure the top-level `parserOptions` property like this:
+## Getting Started
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+1. Clone the repository to your local machine.
+2. Install the dependencies using npm install.
+3. Start the development server using npm run dev.
+4. Open your browser and navigate to http://localhost:3000.
