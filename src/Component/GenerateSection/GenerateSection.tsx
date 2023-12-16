@@ -26,6 +26,7 @@ const GenerateSection = () => {
       );
       setKitchenMeals(data.meals);
     } catch (error: unknown) {
+      cosole.log(error)
       setApiError(
         "There was a problem fetching the meal data. Please try again later."
       );
@@ -41,6 +42,7 @@ const GenerateSection = () => {
       );
       setMealData(data.meals[0]);
     } catch (error: unknown) {
+      cosole.log(error)
       setApiError(
         "There was a problem fetching the meal data. Please try again later."
       );
