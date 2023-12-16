@@ -22,11 +22,10 @@ const GenerateSection = () => {
     try {
       setLoading(true);
       const { data } = await axios.get(
-        import.meta.env.VITE_API_LINK_GET_COUNTRY_MEALS+kitchenStr
+        import.meta.env.VITE_API_LINK_GET_COUNTRY_MEALS + kitchenStr
       );
       setKitchenMeals(data?.meals);
     } catch (error: unknown) {
-        console.log( error)
       setApiError(
         "There was a problem fetching the meal data. Please try again later."
       );
@@ -38,11 +37,10 @@ const GenerateSection = () => {
     try {
       setLoading(true);
       const { data } = await axios.get(
-        import.meta.env.VITE_API_LINK_GET_MEAL_DETAILS+mealStr
+        import.meta.env.VITE_API_LINK_GET_MEAL_DETAILS + mealStr
       );
-      setMealData(data?.meals);
+      setMealData(data?.meals[0]);
     } catch (error: unknown) {
-        console.log( error)
       setApiError(
         "There was a problem fetching the meal data. Please try again later."
       );
@@ -53,8 +51,6 @@ const GenerateSection = () => {
 
   useEffect(() => {
     getKitchenMeals("Egyptian");
-    console.log(import.meta.env.VITE_API_LINK_GET_COUNTRY_MEALS)
-    console.log(import.meta.env.VITE_API_LINK_GET_MEAL_DETAILS)
   }, []);
 
   function getRandomMeal() {
@@ -80,7 +76,9 @@ const GenerateSection = () => {
               className="select select-warning w-full max-w-xs"
               onChange={(e) => getKitchenMeals(e.target.value)}
             >
-              <option selected value="Egyptian" >Egyptian</option>
+              <option selected value="Egyptian">
+                Egyptian
+              </option>
               {kitchens.map((kitchen, index) => (
                 <option key={index} value={kitchen}>
                   {kitchen}
@@ -88,7 +86,9 @@ const GenerateSection = () => {
               ))}
             </select>
             {apiError && (
-              <p className="text-2xl text-red-500 font-semibold  text-center">{apiError}</p>
+              <p className="text-2xl text-red-500 font-semibold  text-center">
+                {apiError}
+              </p>
             )}
             {loading ? (
               <button className="btn btn-warning">
