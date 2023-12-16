@@ -18,7 +18,16 @@ html {
   background-size: cover;
 }
 
-.layer {
+.hero-layer {
+  background-color: rgba(0, 0, 0, 0.8);
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 36px;
+}
+.generate-layer {
   background-color: rgba(0, 0, 0, 0.8);
   min-height: 120dvh;
   display: flex;
