@@ -26,7 +26,6 @@ const GenerateSection = () => {
       );
       setKitchenMeals(data?.meals);
     } catch (error: unknown) {
-      console.log(error)
       setApiError(
         "There was a problem fetching the meal data. Please try again later."
       );
@@ -40,9 +39,8 @@ const GenerateSection = () => {
       const { data } = await axios.get(
         import.meta.env.VITE_API_LINK_GET_MEAL_DETAILS+mealStr
       );
-      setMealData(data?.meals[0]);
+      setMealData(data?.meals);
     } catch (error: unknown) {
-      console.log(error)
       setApiError(
         "There was a problem fetching the meal data. Please try again later."
       );
