@@ -24,7 +24,7 @@ const GenerateSection = () => {
       const { data } = await axios.get(
         import.meta.env.VITE_API_LINK_GET_COUNTRY_MEALS+kitchenStr
       );
-      setKitchenMeals(data.meals);
+      setKitchenMeals(data?.meals);
     } catch (error: unknown) {
       console.log(error)
       setApiError(
@@ -40,7 +40,7 @@ const GenerateSection = () => {
       const { data } = await axios.get(
         import.meta.env.VITE_API_LINK_GET_MEAL_DETAILS+mealStr
       );
-      setMealData(data.meals[0]);
+      setMealData(data?.meals[0]);
     } catch (error: unknown) {
       console.log(error)
       setApiError(
