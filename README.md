@@ -8,6 +8,10 @@ Tasty Surprise is a React application that allows users to discover delicious re
 - View detailed information about each recipe, including ingredients and measurements
 - Fetches real-time data from an external API
 
+## Screenshots
+### Home page
+<img src="https://drive.google.com/uc?id=1gwEUtkSe8XyUrrTR1sCfY9YPEOtQ6Wrz" alt="home-page">
+
 ## Technologies Used
 
 - React
